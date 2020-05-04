@@ -3,10 +3,10 @@ ProjectTitle: EmailMarker - Sign
 PageList:
 - file: sign-in.html
   titleName: EM - Sign In
-  ready: 1
+  ready: 55
 - file: sign-up.html
   titleName: EM - Sign Up
-  ready: 1
+  ready: 55
 - file: sign-reset.html
   titleName: EM - Reset Password
-  ready: 1
+  ready: 55

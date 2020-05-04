@@ -127,6 +127,25 @@ var initValidation = function initValidation() {
 			}
 		}
 	});
+	$("#signIn").validate({
+		submitHandler: validationSubmitHandler,
+		errorPlacement: validationErrorPlacement,
+		highlight: validationHighlight,
+		unhighlight: validationUnhighlight,
+		onkeyup: function onkeyup(element) {
+			$(element).valid();
+		},
+		rules: {
+			signin_email: {
+				required: true,
+				email: true
+			},
+			signin_password: {
+				required: true,
+				minlength: 8
+			}
+		}
+	});
 };
 
 /**
