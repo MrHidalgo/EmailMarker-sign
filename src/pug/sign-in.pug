@@ -5,8 +5,6 @@ pageClassName: p-sign
 ---
 extends shared/_layout
 
-block script
-
 block content
 	div.body(class!= pageClassName)
 
@@ -58,4 +56,4 @@ block content
 
 				.sign__wrapper-right
 
-					img(src="img/img-sign-in.svg" alt="")
+					img.sign__img.sign__img--in(src="img/img-sign-in.svg" alt="")

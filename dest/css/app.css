@@ -373,12 +373,14 @@ picture {
 
 /* line 21, src/scss/_shared/_common.scss */
 .sign__bg-left {
-  width: 36%;
+  width: -webkit-calc(36% + 1px);
+  width: calc(36% + 1px);
 }
 
 /* line 25, src/scss/_shared/_common.scss */
 .sign__bg-right {
-  width: 64%;
+  width: -webkit-calc(64% - 1px);
+  width: calc(64% - 1px);
   background-color: #f3fbff;
   background-image: url("../img/img-bg-texture.svg");
   background-repeat: no-repeat;
@@ -402,16 +404,17 @@ picture {
   padding-right: 50px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 104px;
 }
 
-/* line 48, src/scss/_shared/_common.scss */
+/* line 47, src/scss/_shared/_common.scss */
 .sign__wrapper-left {
   width: 100%;
-  max-width: 670px;
+  max-width: 719px;
+  padding-top: 104px;
+  padding-bottom: 34px;
 }
 
-/* line 53, src/scss/_shared/_common.scss */
+/* line 54, src/scss/_shared/_common.scss */
 .sign__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -431,12 +434,11 @@ picture {
           flex: 1;
   min-width: 1px;
   max-width: 100%;
-  height: -webkit-calc(100vh - 104px);
-  height: calc(100vh - 104px);
+  min-height: 100%;
 }
 
-/* line 62, src/scss/_shared/_common.scss */
-.sign__wrapper-right img {
+/* line 65, src/scss/_shared/_common.scss */
+.sign__img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -444,26 +446,33 @@ picture {
 }
 
 /* line 71, src/scss/_shared/_common.scss */
+.sign__img--reset {
+  position: relative;
+  top: -23px;
+  left: 48px;
+}
+
+/* line 78, src/scss/_shared/_common.scss */
 .sign__container {
   width: 100%;
-  max-width: 610px;
+  max-width: 546px;
   margin-left: auto;
 }
 
-/* line 79, src/scss/_shared/_common.scss */
+/* line 86, src/scss/_shared/_common.scss */
 .sign__info {
   font-size: 14px;
   line-height: 24px;
   color: #818992;
 }
 
-/* line 84, src/scss/_shared/_common.scss */
+/* line 91, src/scss/_shared/_common.scss */
 .sign__info a {
   position: relative;
   color: #04c7ff;
 }
 
-/* line 89, src/scss/_shared/_common.scss */
+/* line 96, src/scss/_shared/_common.scss */
 .sign__info a:hover:before, .sign__info a:hover:after {
   width: 50%;
   -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
@@ -471,7 +480,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 96, src/scss/_shared/_common.scss */
+/* line 103, src/scss/_shared/_common.scss */
 .sign__info a:before, .sign__info a:after {
   content: '';
   position: absolute;
@@ -485,22 +494,22 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 107, src/scss/_shared/_common.scss */
+/* line 114, src/scss/_shared/_common.scss */
 .sign__info a:before {
   left: 50%;
 }
 
-/* line 110, src/scss/_shared/_common.scss */
+/* line 117, src/scss/_shared/_common.scss */
 .sign__info a:after {
   right: 50%;
 }
 
-/* line 116, src/scss/_shared/_common.scss */
+/* line 123, src/scss/_shared/_common.scss */
 .sign__radio {
   position: relative;
 }
 
-/* line 119, src/scss/_shared/_common.scss */
+/* line 126, src/scss/_shared/_common.scss */
 .sign__radio input {
   opacity: 0;
   visibility: hidden;
@@ -509,7 +518,7 @@ picture {
   height: 0;
 }
 
-/* line 128, src/scss/_shared/_common.scss */
+/* line 135, src/scss/_shared/_common.scss */
 .sign__radio input:checked + label i {
   border-color: #1bc18e;
   background-color: #1bc18e;
@@ -518,7 +527,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 133, src/scss/_shared/_common.scss */
+/* line 140, src/scss/_shared/_common.scss */
 .sign__radio input:checked + label i .icon-font {
   opacity: 1;
   visibility: visible;
@@ -530,7 +539,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 144, src/scss/_shared/_common.scss */
+/* line 151, src/scss/_shared/_common.scss */
 .sign__radio label {
   cursor: pointer;
   position: relative;
@@ -544,7 +553,7 @@ picture {
           align-items: center;
 }
 
-/* line 150, src/scss/_shared/_common.scss */
+/* line 157, src/scss/_shared/_common.scss */
 .sign__radio label > i {
   position: absolute;
   top: -webkit-calc(50% - 1px);
@@ -576,13 +585,15 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 165, src/scss/_shared/_common.scss */
+/* line 172, src/scss/_shared/_common.scss */
 .sign__radio label > i .icon-font {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
+  position: relative;
+  top: -1px;
   font-size: 9px;
   color: #fff;
   -webkit-backface-visibility: hidden;
@@ -595,7 +606,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 177, src/scss/_shared/_common.scss */
+/* line 186, src/scss/_shared/_common.scss */
 .sign__radio label span {
   padding-left: 25px;
   font-size: 14px;
@@ -603,15 +614,24 @@ picture {
   color: #818992;
 }
 
-/* line 186, src/scss/_shared/_common.scss */
+/* line 195, src/scss/_shared/_common.scss */
 .sign__form {
   width: 100%;
   max-width: 537px;
 }
 
-/* line 190, src/scss/_shared/_common.scss */
+/* line 199, src/scss/_shared/_common.scss */
 .sign__form-group {
   overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-border-radius: 3px;
           border-radius: 3px;
   margin-bottom: 77px;
@@ -620,7 +640,12 @@ picture {
           box-shadow: 0px 13px 26px rgba(0, 32, 111, 0.05);
 }
 
-/* line 198, src/scss/_shared/_common.scss */
+/* line 208, src/scss/_shared/_common.scss */
+.sign__form-group--mb0 {
+  margin-bottom: 0;
+}
+
+/* line 213, src/scss/_shared/_common.scss */
 .sign__form-done {
   opacity: 0;
   visibility: hidden;
@@ -647,7 +672,7 @@ picture {
   transition: opacity 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* line 211, src/scss/_shared/_common.scss */
+/* line 226, src/scss/_shared/_common.scss */
 .is-done .sign__form-done {
   opacity: 1;
   visibility: visible;
@@ -656,18 +681,50 @@ picture {
   transition: opacity 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* line 217, src/scss/_shared/_common.scss */
+/* line 232, src/scss/_shared/_common.scss */
 .sign__form-done .icon-font {
   font-size: 9px;
   color: #fff;
 }
 
-/* line 224, src/scss/_shared/_common.scss */
+/* line 238, src/scss/_shared/_common.scss */
+.sign__form-passwod {
+  z-index: 10;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 244, src/scss/_shared/_common.scss */
+.sign__form-passwod:hover .icon-font {
+  color: #04c7ff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 250, src/scss/_shared/_common.scss */
+.sign__form-passwod .icon-font {
+  color: #818992;
+  font-size: 23px;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 257, src/scss/_shared/_common.scss */
+.sign__form-field {
+  width: 100%;
+}
+
+/* line 260, src/scss/_shared/_common.scss */
 .sign__form-field label.error {
   display: none !important;
 }
 
-/* line 228, src/scss/_shared/_common.scss */
+/* line 264, src/scss/_shared/_common.scss */
 .sign__form-field--input {
   position: relative;
   display: -webkit-box;
@@ -675,17 +732,17 @@ picture {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 536px;
+  max-width: 100%;
   height: 80px;
   background-color: #fff;
 }
 
-/* line 236, src/scss/_shared/_common.scss */
+/* line 272, src/scss/_shared/_common.scss */
 .sign__form-field--input:not(:last-of-type) {
   border-bottom: 1px solid #f4f9fc;
 }
 
-/* line 241, src/scss/_shared/_common.scss */
+/* line 277, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-focus:before, .sign__form-field--input.is-focus:after {
   width: 50%;
   -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
@@ -693,30 +750,30 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 248, src/scss/_shared/_common.scss */
+/* line 284, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-error:before, .sign__form-field--input.is-error:after {
   background-color: #cc0000;
 }
 
-/* line 253, src/scss/_shared/_common.scss */
-.sign__form-field--input.is-error .icon-envelope {
+/* line 289, src/scss/_shared/_common.scss */
+.sign__form-field--input.is-error .icon-font {
   color: #cc0000;
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
-/* line 258, src/scss/_shared/_common.scss */
+/* line 294, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-done {
   background-color: #f4f9fc;
 }
 
-/* line 261, src/scss/_shared/_common.scss */
+/* line 297, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-done:before, .sign__form-field--input.is-done:after {
   background-color: #f4f9fc;
 }
 
-/* line 267, src/scss/_shared/_common.scss */
+/* line 303, src/scss/_shared/_common.scss */
 .sign__form-field--input:before, .sign__form-field--input:after {
   content: '';
   position: absolute;
@@ -729,17 +786,17 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 278, src/scss/_shared/_common.scss */
+/* line 314, src/scss/_shared/_common.scss */
 .sign__form-field--input:before {
   left: 50%;
 }
 
-/* line 281, src/scss/_shared/_common.scss */
+/* line 317, src/scss/_shared/_common.scss */
 .sign__form-field--input:after {
   right: 50%;
 }
 
-/* line 286, src/scss/_shared/_common.scss */
+/* line 322, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(1), .sign__form-field--input > div:nth-of-type(3) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -755,12 +812,12 @@ picture {
           justify-content: center;
 }
 
-/* line 293, src/scss/_shared/_common.scss */
+/* line 329, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(1) {
   width: 65px;
 }
 
-/* line 297, src/scss/_shared/_common.scss */
+/* line 333, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -779,12 +836,12 @@ picture {
   max-width: 100%;
 }
 
-/* line 305, src/scss/_shared/_common.scss */
+/* line 341, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(3) {
   width: 56px;
 }
 
-/* line 309, src/scss/_shared/_common.scss */
+/* line 345, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font {
   color: #818992;
   -webkit-transition: color 0.3s ease-in-out;
@@ -792,19 +849,29 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 313, src/scss/_shared/_common.scss */
+/* line 349, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font.icon-envelope {
   font-size: 18px;
 }
 
-/* line 319, src/scss/_shared/_common.scss */
+/* line 352, src/scss/_shared/_common.scss */
+.sign__form-field--input > div > .icon-font.icon-user {
+  font-size: 24px;
+}
+
+/* line 355, src/scss/_shared/_common.scss */
+.sign__form-field--input > div > .icon-font.icon-key {
+  font-size: 12px;
+}
+
+/* line 361, src/scss/_shared/_common.scss */
 .sign__form-field--input label,
 .sign__form-field--input input {
   height: 50%;
   width: 100%;
 }
 
-/* line 325, src/scss/_shared/_common.scss */
+/* line 367, src/scss/_shared/_common.scss */
 .sign__form-field--input label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -814,9 +881,10 @@ picture {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
+  padding-bottom: 3px;
 }
 
-/* line 329, src/scss/_shared/_common.scss */
+/* line 372, src/scss/_shared/_common.scss */
 .sign__form-field--input label span {
   font-weight: normal;
   font-size: 14px;
@@ -824,7 +892,7 @@ picture {
   color: #818992;
 }
 
-/* line 337, src/scss/_shared/_common.scss */
+/* line 380, src/scss/_shared/_common.scss */
 .sign__form-field--input input {
   outline: none;
   position: relative;
@@ -842,7 +910,7 @@ picture {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: transparent;
-  padding: 0 0 10px 0;
+  padding: 0 0 22px 0;
   font-size: 17px;
   color: #464646;
 }
@@ -877,7 +945,7 @@ picture {
   color: rgba(70, 70, 70, 0.3);
 }
 
-/* line 356, src/scss/_shared/_common.scss */
+/* line 399, src/scss/_shared/_common.scss */
 .sign__form-field--additional {
   display: -webkit-box;
   display: -webkit-flex;
@@ -895,7 +963,7 @@ picture {
   padding-bottom: 53px;
 }
 
-/* line 363, src/scss/_shared/_common.scss */
+/* line 406, src/scss/_shared/_common.scss */
 .sign__form-field--additional a {
   font-size: 14px;
   line-height: 31px;
@@ -905,7 +973,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 369, src/scss/_shared/_common.scss */
+/* line 412, src/scss/_shared/_common.scss */
 .sign__form-field--additional a:hover {
   color: #04c7ff;
   -webkit-transition: color 0.3s ease-in-out;
@@ -913,7 +981,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 376, src/scss/_shared/_common.scss */
+/* line 419, src/scss/_shared/_common.scss */
 .sign__form-field--btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -930,7 +998,7 @@ picture {
   padding-bottom: 53px;
 }
 
-/* line 384, src/scss/_shared/_common.scss */
+/* line 427, src/scss/_shared/_common.scss */
 .sign__form .c-btn {
   width: 100%;
   max-width: -webkit-calc((100% - 51px) / 2);
@@ -948,7 +1016,7 @@ picture {
 
 /* line 3, src/scss/_macros/_logotype.scss */
 .logo {
-  padding-bottom: 107px;
+  padding-bottom: 118px;
 }
 
 /* line 6, src/scss/_macros/_logotype.scss */
@@ -972,7 +1040,8 @@ picture {
 
 /* line 3, src/scss/_macros/_title.scss */
 .c-title {
-  padding-bottom: 12px;
+  white-space: nowrap;
+  padding-bottom: 15px;
   font-size: 66px;
   line-height: 45px;
   color: #000;
@@ -991,7 +1060,7 @@ picture {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 77px;
+  padding-bottom: 70px;
 }
 
 /* line 9, src/scss/_macros/_subtitle.scss */
@@ -1004,6 +1073,7 @@ picture {
 
 /* line 16, src/scss/_macros/_subtitle.scss */
 .c-subtitle span {
+  letter-spacing: -0.4px;
   font-size: 14px;
   line-height: 28px;
   color: #464646;

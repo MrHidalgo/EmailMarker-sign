@@ -105,6 +105,28 @@ var initValidation = function initValidation() {
 			}
 		}
 	});
+	$("#signUp").validate({
+		submitHandler: validationSubmitHandler,
+		errorPlacement: validationErrorPlacement,
+		highlight: validationHighlight,
+		unhighlight: validationUnhighlight,
+		onkeyup: function onkeyup(element) {
+			$(element).valid();
+		},
+		rules: {
+			signup_name: {
+				required: true
+			},
+			signup_email: {
+				required: true,
+				email: true
+			},
+			signup_password: {
+				required: true,
+				minlength: 8
+			}
+		}
+	});
 };
 
 /**
@@ -153,6 +175,18 @@ var initValidation = function initValidation() {
 			}
 		}
 	};
+
+	var togglePassword = function togglePassword() {
+		$('[toggle-password-js]').on('click', function (ev) {
+			var _parentNode = $(ev.currentTarget).closest('.sign__form-field');
+
+			if (_parentNode.find('input').attr('type') === 'password') {
+				_parentNode.find('input[type="password"]').attr('type', 'text');
+			} else {
+				_parentNode.find('input[type="text"]').attr('type', 'password');
+			}
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -173,6 +207,7 @@ var initValidation = function initValidation() {
 
 		// callback
 		inputFocusAnimate();
+		togglePassword();
 		// ==========================================
 	};
 	initNative();

@@ -23,6 +23,18 @@
 			});
 		}
 	};
+
+	const togglePassword = () => {
+		$('[toggle-password-js]').on('click', (ev) => {
+			const _parentNode = $(ev.currentTarget).closest('.sign__form-field');
+
+			if(_parentNode.find('input').attr('type') === 'password') {
+				_parentNode.find('input[type="password"]').attr('type', 'text');
+			} else {
+				_parentNode.find('input[type="text"]').attr('type', 'password');
+			}
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -44,6 +56,7 @@
 
 		// callback
 		inputFocusAnimate();
+		togglePassword();
 		// ==========================================
 	};
 	initNative();
