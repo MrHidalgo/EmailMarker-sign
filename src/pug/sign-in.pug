@@ -1,0 +1,61 @@
+---
+title: EmailMarker | Sign In
+
+pageClassName: p-sign
+---
+extends shared/_layout
+
+block script
+
+block content
+	div.body(class!= pageClassName)
+
+		section#sign.sign
+
+			.sign__bg
+				.sign__bg-left
+				.sign__bg-right
+
+			.sign__wrapper
+				.sign__wrapper-left
+
+					.sign__container
+
+						.sign__content
+
+							.logo
+								a.logo__btn(href="#")
+									img(src="img/logo.svg" alt="")
+
+							h1.c-title Welcome Back :)
+							p.c-subtitle
+								i
+								span A trusted solution for your digital marketing needs.
+
+						form.sign__form(action='' method='' autocomplete='off')
+							.sign__form-field.sign__form-field--additional
+								div
+
+									.sign__radio
+										input(type='checkbox' name='' id='remember_me')
+										label(for='remember_me')
+											i
+												svg(xmlns='http://www.w3.org/2000/svg', width='11.107', height='8.969', viewBox='0 0 11.107 8.969')
+													path(d='M8.415.266,3.038,5.709,1.572,3.993A.881.881,0,0,0,.306,3.906.936.936,0,0,0,.222,5.2L2.315,7.655a.888.888,0,0,0,.642.314H2.99A.885.885,0,0,0,3.62,7.7l6.055-6.13a.935.935,0,0,0,.008-1.3A.881.881,0,0,0,8.415.266', transform='translate(0.581 0.5)', fill='#fff', stroke='rgba(0,0,0,0)', stroke-miterlimit='10', stroke-width='1')
+											span Remember Me
+
+								div
+									a(href='/sign-reset.html') Can’t remember your password?
+
+							.sign__form-field.sign__form-field--btn
+								button.c-btn.c-btn__bg(type='submit')
+									span LOGIN
+								a.c-btn.c-btn__white(href="/sign-up.html")
+									span CREAT ACCOUNT
+
+						.sign__content
+							p.sign__info!= "Signing up for EmailMarker account means you agree to<br>>the <a href='#'>Privacy Policy</a> and <a href='#'>Terms of Service.</a>"
+
+				.sign__wrapper-right
+
+					img(src="img/img-sign-in.svg" alt="")

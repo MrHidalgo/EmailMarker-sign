@@ -1,0 +1,103 @@
+// BUTTON :: START
+
+// ==================================================
+// ==================================================
+// ==================================================
+
+//$bth-width: 250px;
+$bth-height: 67px;
+$bth-border-radius: 3px;
+$bth-background-color: rgba(#000, 1);
+$bth-font-size: 19px;
+$bth-font-weight: 500;
+$btn-color--border: rgba(#000, 1);
+
+// ==================================================
+// ==================================================
+// ==================================================
+
+.c-btn {
+  outline: none;
+	overflow: hidden;
+  cursor: pointer;
+	position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: $bth-height;
+	border: none;
+  border-radius: $bth-border-radius;
+	transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+
+	&:hover,
+	&:active {
+		transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+
+		&:after {
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(-50%) translateY(-50%) scale(1);
+			transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+		}
+	}
+
+	&:after {
+		content: '';
+		z-index: 0;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: calc(100% + 30px);
+		border-radius: 50%;
+		padding: calc(40% + 30px) 0;
+		transform: translateX(-50%) translateY(-50%) scale(0);
+		backface-visibility: hidden;
+		transform-origin: center;
+		transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+	}
+
+	span {
+		z-index: 2;
+		position: relative;
+		top: 1px;
+		text-transform: uppercase;
+		line-height: 1;
+		font-size: $bth-font-size;
+		font-weight: $bth-font-weight;
+	}
+
+	&__bg {
+		background-color: #04c7ff;
+		box-shadow: 0px 3px 3px rgba(0, 90, 220, 0.2);
+
+		&:hover {
+			box-shadow: 0px 1px 1px rgba(0, 90, 220, 0.15);
+		}
+
+		&:after {
+			background-color: darken(#04c7ff, 3%);
+		}
+
+		span {
+			color: $c-white;
+		}
+	}
+
+	&__white {
+		background-color: $c-white;
+		box-shadow: 0px 3px 3px rgba(223, 235, 242, 0.6);
+
+		&:after {
+			background-color: darken($c-white, 2%);
+		}
+
+		span {
+			color: #818992;
+		}
+	}
+}
+
+// BUTTON :: END

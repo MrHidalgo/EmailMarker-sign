@@ -1,0 +1,60 @@
+---
+title: EmailMarker | Sign Up
+
+pageClassName: p-sign
+---
+extends shared/_layout
+
+block script
+
+block content
+	div.body(class!= pageClassName)
+
+		section#sign.sign
+
+			.sign__bg
+				.sign__bg-left
+				.sign__bg-right
+
+			.sign__wrapper
+				.sign__wrapper-left
+
+					.sign__container
+
+						.sign__content
+
+							.logo
+								a.logo__btn(href="#")
+									img(src="img/logo.svg" alt="")
+
+							h1.c-title Welcome to Family
+							p.c-subtitle
+								i
+								span A trusted solution for your digital marketing needs.
+
+						form.sign__form(action='' method='' autocomplete='off')
+							.sign__form-field.sign__form-field--additional
+								div
+
+									.sign__radio
+										input(type='checkbox' name='' id='remember_me')
+										label(for='remember_me')
+											i
+												i.icon-font.icon-checked
+											span Remember Me
+
+								div
+
+
+							.sign__form-field.sign__form-field--btn
+								button.c-btn.c-btn__bg(type='submit')
+									span SIGN UP FOR FREE
+								a.c-btn.c-btn__white(href="#")
+									span GET LOGIN
+
+						.sign__content
+							p.sign__info!= "Signing up for EmailMarker account means you agree to<br>the <a href='#'>Privacy Policy</a> and <a href='#'>Terms of Service.</a>"
+
+				.sign__wrapper-right
+
+					img(src="img/img-sign-up.svg" alt="")

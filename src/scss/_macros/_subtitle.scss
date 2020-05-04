@@ -1,0 +1,23 @@
+// SUBTITLE :: START
+
+.c-subtitle {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-bottom: 77px;
+
+	i {
+		width: 30px;
+		height: 1px;
+		margin-right: 10px;
+		background-color: #000000;
+	}
+
+	span {
+		font-size: 14px;
+		line-height: 28px;
+		color: #464646;
+	}
+}
+
+// SUBTITLE :: END

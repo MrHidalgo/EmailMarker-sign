@@ -1,0 +1,391 @@
+// COMMON :: START
+
+.sign {
+	position: relative;
+	background-color: $c-white;
+
+	&__bg {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		width: 100%;
+		height: 100%;
+
+		&-left,
+		&-right {
+			min-height: 100%;
+		}
+
+		&-left {
+			width: 36%;
+		}
+
+		&-right {
+			width: 64%;
+			background-color: #f3fbff;
+			background-image: url('../img/img-bg-texture.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+
+	&__wrapper {
+		z-index: 2;
+		position: relative;
+		display: flex;
+		min-height: 100vh;
+		width: 100%;
+		max-width: 1810px;
+		padding-left: 50px;
+		padding-right: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 104px;
+
+		&-left {
+			width: 100%;
+			max-width: 670px;
+		}
+
+		&-right {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+			height: calc(100vh - 104px);
+
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				max-height: 100%;
+			}
+		}
+	}
+
+	&__container {
+		width: 100%;
+		max-width: 610px;
+		margin-left: auto;
+	}
+
+	&__content {}
+
+	&__info {
+		font-size: 14px;
+		line-height: 24px;
+		color: #818992;
+
+		a {
+			position: relative;
+			color: #04c7ff;
+
+			&:hover {
+				&:before,
+				&:after {
+					width: 50%;
+					transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+				}
+			}
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: calc(100% + 1px);
+				width: 0;
+				height: 1px;
+				background-color: #04c7ff;
+				transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+			}
+
+			&:before {
+				left: 50%;
+			}
+			&:after {
+				right: 50%;
+			}
+		}
+	}
+
+	&__radio {
+		position: relative;
+
+		input {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			width: 0;
+			height: 0;
+
+			&:checked {
+				& + label {
+					i {
+						border-color: #1bc18e;
+						background-color: #1bc18e;
+						transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+
+						.icon-font {
+							opacity: 1;
+							visibility: visible;
+							transform: scale(1);
+							transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+						}
+					}
+				}
+			}
+		}
+
+		label {
+			cursor: pointer;
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			> i {
+				position: absolute;
+				top: calc(50% - 1px);
+				transform: translateY(-50%);
+				left: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 16px;
+				height: 16px;
+				border-radius: 3px;
+				background-color: $c-white;
+				border: 1px solid #818992;
+				transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+
+				.icon-font {
+					opacity: 0;
+					visibility: hidden;
+					transform: scale(0);
+					font-size: 9px;
+					color: $c-white;
+					backface-visibility: hidden;
+					transform-origin: center;
+					transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+				}
+			}
+
+			span {
+				padding-left: 25px;
+				font-size: 14px;
+				line-height: 31px;
+				color: #818992;
+			}
+		}
+	}
+
+	&__form {
+		width: 100%;
+		max-width: 537px;
+
+		&-group {
+			overflow: hidden;
+			border-radius: 3px;
+			margin-bottom: 77px;
+			background-color: #fff;
+			box-shadow: 0px 13px 26px rgba(0, 32, 111, 0.05);
+		}
+
+		&-done {
+			opacity: 0;
+			visibility: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 16px;
+			height: 16px;
+			border-radius: 3px;
+			background-color: #1BC18E;
+			border: 1px solid #1BC18E;
+			@include transition(opacity, opacity);
+
+			.is-done & {
+				opacity: 1;
+				visibility: visible;
+				@include transition(opacity, opacity);
+			}
+
+			.icon-font {
+				font-size: 9px;
+				color: $c-white;
+			}
+		}
+
+		&-field {
+			label.error {
+				display: none !important;
+			}
+
+			&--input {
+				position: relative;
+				display: flex;
+				width: 100%;
+				max-width: 536px;
+				height: 80px;
+				background-color: #fff;
+
+				&:not(:last-of-type) {
+					border-bottom: 1px solid #f4f9fc;
+				}
+
+				&.is-focus {
+					&:before,
+					&:after {
+						width: 50%;
+						transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+					}
+				}
+				&.is-error {
+					&:before,
+					&:after {
+						background-color: $c-danger;
+					}
+
+					.icon-envelope {
+						color: $c-danger;
+						@include transition(color);
+					}
+				}
+				&.is-done {
+					background-color: #f4f9fc;
+
+					&:before,
+					&:after {
+						background-color: #f4f9fc;
+					}
+				}
+
+				&:before,
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					width: 0;
+					height: 1px;
+					background-color: #04c7ff;
+					transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+				}
+
+				&:before {
+					left: 50%;
+				}
+				&:after {
+					right: 50%;
+				}
+
+				> div {
+					&:nth-of-type(1),
+					&:nth-of-type(3) {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					&:nth-of-type(1) {
+						width: 65px;
+					}
+
+					&:nth-of-type(2) {
+						display: flex;
+						flex-direction: column;
+						flex: 1;
+						min-width: 1px;
+						max-width: 100%;
+					}
+
+					&:nth-of-type(3) {
+						width: 56px;
+					}
+
+					> .icon-font {
+						color: #818992;
+						@include transition(color);
+
+						&.icon-envelope {
+							font-size: 18px;
+						}
+					}
+				}
+
+				label,
+				input {
+					height: 50%;
+					width: 100%;
+				}
+
+				label {
+					display: flex;
+					align-items: flex-end;
+
+					span {
+						font-weight: normal;
+						font-size: 14px;
+						line-height: 1;
+						color: #818992;
+					}
+				}
+
+				input {
+					outline: none;
+					position: relative;
+					display: flex;
+					align-items: flex-start;
+					border: none;
+					border-radius: 0;
+					box-shadow: none;
+					background-color: transparent;
+					padding: 0 0 10px 0;
+					font-size: 17px;
+					color: #464646;
+					@include inputPlaceholder {
+						font-size: 17px;
+						color: rgba(#464646, 0.3);
+					}
+				}
+			}
+
+			&--additional {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding-top: 62px;
+				padding-bottom: 53px;
+
+				a {
+					font-size: 14px;
+					line-height: 31px;
+					color: #818992;
+					@include transition(color);
+
+					&:hover {
+						color: #04c7ff;
+						@include transition(color);
+					}
+				}
+			}
+
+			&--btn {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding-bottom: 53px;
+			}
+		}
+
+		.c-btn {
+			width: 100%;
+			max-width: calc((100% - 51px) / 2);
+		}
+	}
+}
+
+// COMMON :: END

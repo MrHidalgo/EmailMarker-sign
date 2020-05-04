@@ -1,0 +1,54 @@
+---
+title: EmailMarker | Reset Password
+
+pageClassName: p-sign
+---
+extends shared/_layout
+
+block content
+	div.body(class!= pageClassName)
+
+		section#sign.sign
+
+			.sign__bg
+				.sign__bg-left
+				.sign__bg-right
+
+			.sign__wrapper
+				.sign__wrapper-left
+
+					.sign__container
+
+						.sign__content
+
+							.logo
+								a.logo__btn(href="#")
+									img(src="img/logo.svg" alt="")
+
+							h1.c-title Reset Password
+							p.c-subtitle
+								i
+								span A trusted solution for your digital marketing needs.
+
+						form#signReset.sign__form(action='' method='' autocomplete='off')
+							.sign__form-group
+								.sign__form-field.sign__form-field--input
+									div
+										i.icon-font.icon-envelope
+									div
+										label(for='reset_email')
+											span Email Adresse
+										input(type='email' name='reset_email' id='reset_email' placeholder='enter your email' input-js required)
+									div
+										.sign__form-done
+											i.icon-font.icon-checked
+
+							.sign__form-field.sign__form-field--btn
+								button.c-btn.c-btn__bg(type='submit')
+									span SEND
+								a.c-btn.c-btn__white(href="/sign-in.html")
+									span GET LOGIN
+
+				.sign__wrapper-right
+
+					img(src="img/img-sign-reset.svg" alt="")

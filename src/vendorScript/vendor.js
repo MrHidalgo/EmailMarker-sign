@@ -1,0 +1,8 @@
+/*
+*
+* Include :
+*
+* - jquery;
+* - jquery-validation;
+*
+* */
