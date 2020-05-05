@@ -3,9 +3,12 @@
 .c-title {
 	white-space: nowrap;
 	padding-bottom: 15px;
-	font-size: 66px;
 	line-height: 45px;
 	color: #000;
+	@include fluid(font-size, 320px, 1920px, 33px, 66px);
+	@include adaptive(767) {
+		white-space: normal;
+	}
 }
 
 // TITLE :: END

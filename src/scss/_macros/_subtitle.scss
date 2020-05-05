@@ -5,6 +5,9 @@
 	flex-wrap: wrap;
 	align-items: center;
 	padding-bottom: 70px;
+	@include adaptive(1493) {
+		padding-bottom: 50px;
+	}
 
 	i {
 		width: 30px;

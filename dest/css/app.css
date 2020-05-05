@@ -406,16 +406,51 @@ picture {
   margin-right: auto;
 }
 
-/* line 47, src/scss/_shared/_common.scss */
+@media screen and (max-width: 1279px) {
+  /* line 35, src/scss/_shared/_common.scss */
+  .sign__wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 35, src/scss/_shared/_common.scss */
+  .sign__wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* line 55, src/scss/_shared/_common.scss */
 .sign__wrapper-left {
+  z-index: 10;
+  position: relative;
   width: 100%;
   max-width: 719px;
   padding-top: 104px;
   padding-bottom: 34px;
 }
 
-/* line 54, src/scss/_shared/_common.scss */
+@media screen and (max-width: 1439px) {
+  /* line 55, src/scss/_shared/_common.scss */
+  .sign__wrapper-left {
+    width: auto;
+    padding-top: 50px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 55, src/scss/_shared/_common.scss */
+  .sign__wrapper-left {
+    padding-right: 0;
+  }
+}
+
+/* line 72, src/scss/_shared/_common.scss */
 .sign__wrapper-right {
+  z-index: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -434,10 +469,29 @@ picture {
           flex: 1;
   min-width: 1px;
   max-width: 100%;
-  min-height: 100%;
+  max-height: 100%;
 }
 
-/* line 65, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 72, src/scss/_shared/_common.scss */
+  .sign__wrapper-right {
+    opacity: 0.15;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1493px) {
+  /* line 90, src/scss/_shared/_common.scss */
+  .sign__wrapper-right--reset {
+    height: 100vh;
+  }
+}
+
+/* line 98, src/scss/_shared/_common.scss */
 .sign__img {
   display: block;
   max-width: 100%;
@@ -445,34 +499,52 @@ picture {
   max-height: 100%;
 }
 
-/* line 71, src/scss/_shared/_common.scss */
+/* line 104, src/scss/_shared/_common.scss */
 .sign__img--reset {
   position: relative;
   top: -23px;
   left: 48px;
 }
 
-/* line 78, src/scss/_shared/_common.scss */
+@media screen and (max-width: 1493px) {
+  /* line 104, src/scss/_shared/_common.scss */
+  .sign__img--reset {
+    position: static;
+  }
+}
+
+/* line 114, src/scss/_shared/_common.scss */
 .sign__container {
   width: 100%;
   max-width: 546px;
   margin-left: auto;
 }
 
-/* line 84, src/scss/_shared/_common.scss */
+/* line 120, src/scss/_shared/_common.scss */
 .sign__info {
   font-size: 14px;
   line-height: 24px;
   color: #818992;
 }
 
-/* line 89, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 120, src/scss/_shared/_common.scss */
+  .sign__info {
+    text-align: center;
+  }
+  /* line 127, src/scss/_shared/_common.scss */
+  .sign__info br {
+    display: none;
+  }
+}
+
+/* line 132, src/scss/_shared/_common.scss */
 .sign__info a {
   position: relative;
   color: #04c7ff;
 }
 
-/* line 94, src/scss/_shared/_common.scss */
+/* line 137, src/scss/_shared/_common.scss */
 .sign__info a:hover:before, .sign__info a:hover:after {
   width: 50%;
   -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
@@ -480,7 +552,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 101, src/scss/_shared/_common.scss */
+/* line 144, src/scss/_shared/_common.scss */
 .sign__info a:before, .sign__info a:after {
   content: '';
   position: absolute;
@@ -494,22 +566,22 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 112, src/scss/_shared/_common.scss */
+/* line 155, src/scss/_shared/_common.scss */
 .sign__info a:before {
   left: 50%;
 }
 
-/* line 115, src/scss/_shared/_common.scss */
+/* line 158, src/scss/_shared/_common.scss */
 .sign__info a:after {
   right: 50%;
 }
 
-/* line 121, src/scss/_shared/_common.scss */
+/* line 164, src/scss/_shared/_common.scss */
 .sign__radio {
   position: relative;
 }
 
-/* line 124, src/scss/_shared/_common.scss */
+/* line 167, src/scss/_shared/_common.scss */
 .sign__radio input {
   opacity: 0;
   visibility: hidden;
@@ -518,7 +590,7 @@ picture {
   height: 0;
 }
 
-/* line 133, src/scss/_shared/_common.scss */
+/* line 176, src/scss/_shared/_common.scss */
 .sign__radio input:checked + label i {
   border-color: #1bc18e;
   background-color: #1bc18e;
@@ -527,7 +599,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 138, src/scss/_shared/_common.scss */
+/* line 181, src/scss/_shared/_common.scss */
 .sign__radio input:checked + label i .icon-font {
   opacity: 1;
   visibility: visible;
@@ -539,7 +611,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 149, src/scss/_shared/_common.scss */
+/* line 192, src/scss/_shared/_common.scss */
 .sign__radio label {
   cursor: pointer;
   position: relative;
@@ -553,7 +625,7 @@ picture {
           align-items: center;
 }
 
-/* line 155, src/scss/_shared/_common.scss */
+/* line 198, src/scss/_shared/_common.scss */
 .sign__radio label > i {
   position: absolute;
   top: -webkit-calc(50% - 1px);
@@ -585,7 +657,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 170, src/scss/_shared/_common.scss */
+/* line 213, src/scss/_shared/_common.scss */
 .sign__radio label > i .icon-font {
   opacity: 0;
   visibility: hidden;
@@ -606,7 +678,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 184, src/scss/_shared/_common.scss */
+/* line 227, src/scss/_shared/_common.scss */
 .sign__radio label span {
   padding-left: 25px;
   font-size: 14px;
@@ -614,13 +686,13 @@ picture {
   color: #818992;
 }
 
-/* line 193, src/scss/_shared/_common.scss */
+/* line 236, src/scss/_shared/_common.scss */
 .sign__form {
   width: 100%;
   max-width: 537px;
 }
 
-/* line 197, src/scss/_shared/_common.scss */
+/* line 240, src/scss/_shared/_common.scss */
 .sign__form-group {
   overflow: hidden;
   display: -webkit-box;
@@ -640,12 +712,20 @@ picture {
           box-shadow: 0px 13px 26px rgba(0, 32, 111, 0.05);
 }
 
-/* line 206, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 240, src/scss/_shared/_common.scss */
+  .sign__form-group {
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* line 253, src/scss/_shared/_common.scss */
 .sign__form-group--mb0 {
   margin-bottom: 0;
 }
 
-/* line 211, src/scss/_shared/_common.scss */
+/* line 258, src/scss/_shared/_common.scss */
 .sign__form-done {
   opacity: 0;
   visibility: hidden;
@@ -672,7 +752,7 @@ picture {
   transition: opacity 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* line 224, src/scss/_shared/_common.scss */
+/* line 271, src/scss/_shared/_common.scss */
 .is-done .sign__form-done {
   opacity: 1;
   visibility: visible;
@@ -681,13 +761,13 @@ picture {
   transition: opacity 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* line 230, src/scss/_shared/_common.scss */
+/* line 277, src/scss/_shared/_common.scss */
 .sign__form-done .icon-font {
   font-size: 9px;
   color: #fff;
 }
 
-/* line 236, src/scss/_shared/_common.scss */
+/* line 283, src/scss/_shared/_common.scss */
 .sign__form-passwod {
   z-index: 10;
   position: relative;
@@ -697,7 +777,7 @@ picture {
   display: flex;
 }
 
-/* line 243, src/scss/_shared/_common.scss */
+/* line 290, src/scss/_shared/_common.scss */
 .sign__form-passwod:hover .icon-font, .sign__form-passwod.is-active .icon-font {
   color: #04c7ff;
   -webkit-transition: color 0.3s ease-in-out;
@@ -705,7 +785,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 249, src/scss/_shared/_common.scss */
+/* line 296, src/scss/_shared/_common.scss */
 .sign__form-passwod .icon-font {
   color: #818992;
   font-size: 23px;
@@ -714,17 +794,17 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 256, src/scss/_shared/_common.scss */
+/* line 303, src/scss/_shared/_common.scss */
 .sign__form-field {
   width: 100%;
 }
 
-/* line 259, src/scss/_shared/_common.scss */
+/* line 306, src/scss/_shared/_common.scss */
 .sign__form-field label.error {
   display: none !important;
 }
 
-/* line 263, src/scss/_shared/_common.scss */
+/* line 310, src/scss/_shared/_common.scss */
 .sign__form-field--input {
   position: relative;
   display: -webkit-box;
@@ -734,15 +814,15 @@ picture {
   width: 100%;
   max-width: 100%;
   height: 80px;
-  background-color: #fff;
+  background-color: transparent;
 }
 
-/* line 271, src/scss/_shared/_common.scss */
+/* line 318, src/scss/_shared/_common.scss */
 .sign__form-field--input:not(:last-of-type) {
   border-bottom: 1px solid #f4f9fc;
 }
 
-/* line 276, src/scss/_shared/_common.scss */
+/* line 323, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-focus:before, .sign__form-field--input.is-focus:after {
   width: 50%;
   -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
@@ -750,12 +830,12 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 283, src/scss/_shared/_common.scss */
+/* line 330, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-error:before, .sign__form-field--input.is-error:after {
   background-color: #cc0000;
 }
 
-/* line 288, src/scss/_shared/_common.scss */
+/* line 335, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-error .icon-font {
   color: #cc0000;
   -webkit-transition: color 0.3s ease-in-out;
@@ -763,17 +843,24 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 293, src/scss/_shared/_common.scss */
+/* line 340, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-done {
   background-color: #f4f9fc;
 }
 
-/* line 296, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 340, src/scss/_shared/_common.scss */
+  .sign__form-field--input.is-done {
+    background-color: rgba(244, 249, 252, 0.5);
+  }
+}
+
+/* line 346, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-done:before, .sign__form-field--input.is-done:after {
   background-color: #f4f9fc;
 }
 
-/* line 302, src/scss/_shared/_common.scss */
+/* line 352, src/scss/_shared/_common.scss */
 .sign__form-field--input:before, .sign__form-field--input:after {
   content: '';
   position: absolute;
@@ -786,17 +873,17 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 313, src/scss/_shared/_common.scss */
+/* line 363, src/scss/_shared/_common.scss */
 .sign__form-field--input:before {
   left: 50%;
 }
 
-/* line 316, src/scss/_shared/_common.scss */
+/* line 366, src/scss/_shared/_common.scss */
 .sign__form-field--input:after {
   right: 50%;
 }
 
-/* line 321, src/scss/_shared/_common.scss */
+/* line 371, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(1), .sign__form-field--input > div:nth-of-type(3) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -812,12 +899,12 @@ picture {
           justify-content: center;
 }
 
-/* line 328, src/scss/_shared/_common.scss */
+/* line 378, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(1) {
   width: 65px;
 }
 
-/* line 332, src/scss/_shared/_common.scss */
+/* line 382, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -836,12 +923,12 @@ picture {
   max-width: 100%;
 }
 
-/* line 340, src/scss/_shared/_common.scss */
+/* line 390, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(3) {
   width: 56px;
 }
 
-/* line 344, src/scss/_shared/_common.scss */
+/* line 394, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font {
   color: #818992;
   -webkit-transition: color 0.3s ease-in-out;
@@ -849,29 +936,29 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 348, src/scss/_shared/_common.scss */
+/* line 398, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font.icon-envelope {
   font-size: 18px;
 }
 
-/* line 351, src/scss/_shared/_common.scss */
+/* line 401, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font.icon-user {
   font-size: 24px;
 }
 
-/* line 354, src/scss/_shared/_common.scss */
+/* line 404, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font.icon-key {
   font-size: 12px;
 }
 
-/* line 360, src/scss/_shared/_common.scss */
+/* line 410, src/scss/_shared/_common.scss */
 .sign__form-field--input label,
 .sign__form-field--input input {
   height: 50%;
   width: 100%;
 }
 
-/* line 366, src/scss/_shared/_common.scss */
+/* line 416, src/scss/_shared/_common.scss */
 .sign__form-field--input label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -884,7 +971,7 @@ picture {
   padding-bottom: 3px;
 }
 
-/* line 371, src/scss/_shared/_common.scss */
+/* line 421, src/scss/_shared/_common.scss */
 .sign__form-field--input label span {
   font-weight: normal;
   font-size: 14px;
@@ -892,7 +979,7 @@ picture {
   color: #818992;
 }
 
-/* line 379, src/scss/_shared/_common.scss */
+/* line 429, src/scss/_shared/_common.scss */
 .sign__form-field--input input {
   outline: none;
   position: relative;
@@ -945,7 +1032,7 @@ picture {
   color: rgba(70, 70, 70, 0.3);
 }
 
-/* line 398, src/scss/_shared/_common.scss */
+/* line 448, src/scss/_shared/_common.scss */
 .sign__form-field--additional {
   display: -webkit-box;
   display: -webkit-flex;
@@ -963,7 +1050,26 @@ picture {
   padding-bottom: 53px;
 }
 
-/* line 405, src/scss/_shared/_common.scss */
+@media screen and (max-width: 1335px) {
+  /* line 448, src/scss/_shared/_common.scss */
+  .sign__form-field--additional {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 448, src/scss/_shared/_common.scss */
+  .sign__form-field--additional {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* line 464, src/scss/_shared/_common.scss */
 .sign__form-field--additional a {
   font-size: 14px;
   line-height: 31px;
@@ -973,7 +1079,15 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 411, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 464, src/scss/_shared/_common.scss */
+  .sign__form-field--additional a {
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+/* line 474, src/scss/_shared/_common.scss */
 .sign__form-field--additional a:hover {
   color: #04c7ff;
   -webkit-transition: color 0.3s ease-in-out;
@@ -981,7 +1095,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 418, src/scss/_shared/_common.scss */
+/* line 481, src/scss/_shared/_common.scss */
 .sign__form-field--btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -998,11 +1112,40 @@ picture {
   padding-bottom: 53px;
 }
 
-/* line 426, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 481, src/scss/_shared/_common.scss */
+  .sign__form-field--btn {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    padding-bottom: 30px;
+  }
+}
+
+/* line 493, src/scss/_shared/_common.scss */
 .sign__form .c-btn {
   width: 100%;
   max-width: -webkit-calc((100% - 51px) / 2);
   max-width: calc((100% - 51px) / 2);
+}
+
+@media screen and (max-width: 1335px) {
+  /* line 493, src/scss/_shared/_common.scss */
+  .sign__form .c-btn {
+    max-width: -webkit-calc((100% - 30px) / 2);
+    max-width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 493, src/scss/_shared/_common.scss */
+  .sign__form .c-btn {
+    max-width: 100%;
+  }
+  /* line 502, src/scss/_shared/_common.scss */
+  .sign__form .c-btn:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 /* line 1, src/scss/_shared/_iconFont.scss */
@@ -1019,7 +1162,21 @@ picture {
   padding-bottom: 118px;
 }
 
-/* line 6, src/scss/_macros/_logotype.scss */
+@media screen and (max-width: 1493px) {
+  /* line 3, src/scss/_macros/_logotype.scss */
+  .logo {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1335px) {
+  /* line 3, src/scss/_macros/_logotype.scss */
+  .logo {
+    padding-bottom: 75px;
+  }
+}
+
+/* line 12, src/scss/_macros/_logotype.scss */
 .logo__btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1031,7 +1188,7 @@ picture {
           align-items: flex-start;
 }
 
-/* line 11, src/scss/_macros/_logotype.scss */
+/* line 17, src/scss/_macros/_logotype.scss */
 .logo__img {
   display: block;
   max-width: 100%;
@@ -1042,9 +1199,31 @@ picture {
 .c-title {
   white-space: nowrap;
   padding-bottom: 15px;
-  font-size: 66px;
   line-height: 45px;
   color: #000;
+  font-size: 33px;
+}
+
+@media screen and (min-width: 320px) {
+  /* line 3, src/scss/_macros/_title.scss */
+  .c-title {
+    font-size: -webkit-calc(33px + 33 * (100vw - 320px) / 1600);
+    font-size: calc(33px + 33 * (100vw - 320px) / 1600);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  /* line 3, src/scss/_macros/_title.scss */
+  .c-title {
+    font-size: 66px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_macros/_title.scss */
+  .c-title {
+    white-space: normal;
+  }
 }
 
 /* line 3, src/scss/_macros/_subtitle.scss */
@@ -1063,7 +1242,14 @@ picture {
   padding-bottom: 70px;
 }
 
-/* line 9, src/scss/_macros/_subtitle.scss */
+@media screen and (max-width: 1493px) {
+  /* line 3, src/scss/_macros/_subtitle.scss */
+  .c-subtitle {
+    padding-bottom: 50px;
+  }
+}
+
+/* line 12, src/scss/_macros/_subtitle.scss */
 .c-subtitle i {
   width: 30px;
   height: 1px;
@@ -1071,7 +1257,7 @@ picture {
   background-color: #000000;
 }
 
-/* line 16, src/scss/_macros/_subtitle.scss */
+/* line 19, src/scss/_macros/_subtitle.scss */
 .c-subtitle span {
   letter-spacing: -0.4px;
   font-size: 14px;
@@ -1107,14 +1293,21 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 33, src/scss/_macros/_btn.scss */
+@media screen and (max-width: 767px) {
+  /* line 19, src/scss/_macros/_btn.scss */
+  .c-btn {
+    height: 60px;
+  }
+}
+
+/* line 36, src/scss/_macros/_btn.scss */
 .c-btn:hover, .c-btn:active {
   -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
   -o-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 37, src/scss/_macros/_btn.scss */
+/* line 40, src/scss/_macros/_btn.scss */
 .c-btn:hover:after, .c-btn:active:after {
   opacity: 1;
   visibility: visible;
@@ -1126,7 +1319,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 45, src/scss/_macros/_btn.scss */
+/* line 48, src/scss/_macros/_btn.scss */
 .c-btn:after {
   content: '';
   z-index: 0;
@@ -1154,7 +1347,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 62, src/scss/_macros/_btn.scss */
+/* line 65, src/scss/_macros/_btn.scss */
 .c-btn span {
   z-index: 2;
   position: relative;
@@ -1165,42 +1358,49 @@ picture {
   font-weight: 500;
 }
 
-/* line 72, src/scss/_macros/_btn.scss */
+@media screen and (max-width: 1279px) {
+  /* line 65, src/scss/_macros/_btn.scss */
+  .c-btn span {
+    font-size: 17px;
+  }
+}
+
+/* line 78, src/scss/_macros/_btn.scss */
 .c-btn__bg {
   background-color: #04c7ff;
   -webkit-box-shadow: 0px 3px 3px rgba(0, 90, 220, 0.2);
           box-shadow: 0px 3px 3px rgba(0, 90, 220, 0.2);
 }
 
-/* line 76, src/scss/_macros/_btn.scss */
+/* line 82, src/scss/_macros/_btn.scss */
 .c-btn__bg:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 90, 220, 0.15);
           box-shadow: 0px 1px 1px rgba(0, 90, 220, 0.15);
 }
 
-/* line 80, src/scss/_macros/_btn.scss */
+/* line 86, src/scss/_macros/_btn.scss */
 .c-btn__bg:after {
   background-color: #00bdf4;
 }
 
-/* line 84, src/scss/_macros/_btn.scss */
+/* line 90, src/scss/_macros/_btn.scss */
 .c-btn__bg span {
   color: #fff;
 }
 
-/* line 89, src/scss/_macros/_btn.scss */
+/* line 95, src/scss/_macros/_btn.scss */
 .c-btn__white {
   background-color: #fff;
   -webkit-box-shadow: 0px 3px 3px rgba(223, 235, 242, 0.6);
           box-shadow: 0px 3px 3px rgba(223, 235, 242, 0.6);
 }
 
-/* line 93, src/scss/_macros/_btn.scss */
+/* line 99, src/scss/_macros/_btn.scss */
 .c-btn__white:after {
   background-color: #fafafa;
 }
 
-/* line 97, src/scss/_macros/_btn.scss */
+/* line 103, src/scss/_macros/_btn.scss */
 .c-btn__white span {
   color: #818992;
 }

@@ -29,6 +29,9 @@ $btn-color--border: rgba(#000, 1);
 	border: none;
   border-radius: $bth-border-radius;
 	transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+	@include adaptive(767) {
+		height: 60px;
+	}
 
 	&:hover,
 	&:active {
@@ -67,6 +70,9 @@ $btn-color--border: rgba(#000, 1);
 		line-height: 1;
 		font-size: $bth-font-size;
 		font-weight: $bth-font-weight;
+		@include adaptive(1279) {
+			font-size: 17px;
+		}
 	}
 
 	&__bg {
