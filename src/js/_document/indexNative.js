@@ -28,6 +28,8 @@
 		$('[toggle-password-js]').on('click', (ev) => {
 			const _parentNode = $(ev.currentTarget).closest('.sign__form-field');
 
+			$(ev.currentTarget).toggleClass('is-active');
+
 			if(_parentNode.find('input').attr('type') === 'password') {
 				_parentNode.find('input[type="password"]').attr('type', 'text');
 			} else {

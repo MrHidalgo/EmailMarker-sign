@@ -81,8 +81,6 @@
 		margin-left: auto;
 	}
 
-	&__content {}
-
 	&__info {
 		font-size: 14px;
 		line-height: 24px;
@@ -240,7 +238,8 @@
 			position: relative;
 			display: flex;
 
-			&:hover {
+			&:hover,
+			&.is-active {
 				.icon-font {
 					color: #04c7ff;
 					@include transition(color);

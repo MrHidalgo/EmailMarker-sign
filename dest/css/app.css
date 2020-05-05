@@ -459,20 +459,20 @@ picture {
   margin-left: auto;
 }
 
-/* line 86, src/scss/_shared/_common.scss */
+/* line 84, src/scss/_shared/_common.scss */
 .sign__info {
   font-size: 14px;
   line-height: 24px;
   color: #818992;
 }
 
-/* line 91, src/scss/_shared/_common.scss */
+/* line 89, src/scss/_shared/_common.scss */
 .sign__info a {
   position: relative;
   color: #04c7ff;
 }
 
-/* line 96, src/scss/_shared/_common.scss */
+/* line 94, src/scss/_shared/_common.scss */
 .sign__info a:hover:before, .sign__info a:hover:after {
   width: 50%;
   -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
@@ -480,7 +480,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 103, src/scss/_shared/_common.scss */
+/* line 101, src/scss/_shared/_common.scss */
 .sign__info a:before, .sign__info a:after {
   content: '';
   position: absolute;
@@ -494,22 +494,22 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 114, src/scss/_shared/_common.scss */
+/* line 112, src/scss/_shared/_common.scss */
 .sign__info a:before {
   left: 50%;
 }
 
-/* line 117, src/scss/_shared/_common.scss */
+/* line 115, src/scss/_shared/_common.scss */
 .sign__info a:after {
   right: 50%;
 }
 
-/* line 123, src/scss/_shared/_common.scss */
+/* line 121, src/scss/_shared/_common.scss */
 .sign__radio {
   position: relative;
 }
 
-/* line 126, src/scss/_shared/_common.scss */
+/* line 124, src/scss/_shared/_common.scss */
 .sign__radio input {
   opacity: 0;
   visibility: hidden;
@@ -518,7 +518,7 @@ picture {
   height: 0;
 }
 
-/* line 135, src/scss/_shared/_common.scss */
+/* line 133, src/scss/_shared/_common.scss */
 .sign__radio input:checked + label i {
   border-color: #1bc18e;
   background-color: #1bc18e;
@@ -527,7 +527,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 140, src/scss/_shared/_common.scss */
+/* line 138, src/scss/_shared/_common.scss */
 .sign__radio input:checked + label i .icon-font {
   opacity: 1;
   visibility: visible;
@@ -539,7 +539,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 151, src/scss/_shared/_common.scss */
+/* line 149, src/scss/_shared/_common.scss */
 .sign__radio label {
   cursor: pointer;
   position: relative;
@@ -553,7 +553,7 @@ picture {
           align-items: center;
 }
 
-/* line 157, src/scss/_shared/_common.scss */
+/* line 155, src/scss/_shared/_common.scss */
 .sign__radio label > i {
   position: absolute;
   top: -webkit-calc(50% - 1px);
@@ -585,7 +585,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 172, src/scss/_shared/_common.scss */
+/* line 170, src/scss/_shared/_common.scss */
 .sign__radio label > i .icon-font {
   opacity: 0;
   visibility: hidden;
@@ -606,7 +606,7 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 186, src/scss/_shared/_common.scss */
+/* line 184, src/scss/_shared/_common.scss */
 .sign__radio label span {
   padding-left: 25px;
   font-size: 14px;
@@ -614,13 +614,13 @@ picture {
   color: #818992;
 }
 
-/* line 195, src/scss/_shared/_common.scss */
+/* line 193, src/scss/_shared/_common.scss */
 .sign__form {
   width: 100%;
   max-width: 537px;
 }
 
-/* line 199, src/scss/_shared/_common.scss */
+/* line 197, src/scss/_shared/_common.scss */
 .sign__form-group {
   overflow: hidden;
   display: -webkit-box;
@@ -640,12 +640,12 @@ picture {
           box-shadow: 0px 13px 26px rgba(0, 32, 111, 0.05);
 }
 
-/* line 208, src/scss/_shared/_common.scss */
+/* line 206, src/scss/_shared/_common.scss */
 .sign__form-group--mb0 {
   margin-bottom: 0;
 }
 
-/* line 213, src/scss/_shared/_common.scss */
+/* line 211, src/scss/_shared/_common.scss */
 .sign__form-done {
   opacity: 0;
   visibility: hidden;
@@ -672,7 +672,7 @@ picture {
   transition: opacity 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* line 226, src/scss/_shared/_common.scss */
+/* line 224, src/scss/_shared/_common.scss */
 .is-done .sign__form-done {
   opacity: 1;
   visibility: visible;
@@ -681,13 +681,13 @@ picture {
   transition: opacity 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* line 232, src/scss/_shared/_common.scss */
+/* line 230, src/scss/_shared/_common.scss */
 .sign__form-done .icon-font {
   font-size: 9px;
   color: #fff;
 }
 
-/* line 238, src/scss/_shared/_common.scss */
+/* line 236, src/scss/_shared/_common.scss */
 .sign__form-passwod {
   z-index: 10;
   position: relative;
@@ -697,15 +697,15 @@ picture {
   display: flex;
 }
 
-/* line 244, src/scss/_shared/_common.scss */
-.sign__form-passwod:hover .icon-font {
+/* line 243, src/scss/_shared/_common.scss */
+.sign__form-passwod:hover .icon-font, .sign__form-passwod.is-active .icon-font {
   color: #04c7ff;
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 
-/* line 250, src/scss/_shared/_common.scss */
+/* line 249, src/scss/_shared/_common.scss */
 .sign__form-passwod .icon-font {
   color: #818992;
   font-size: 23px;
@@ -714,17 +714,17 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 257, src/scss/_shared/_common.scss */
+/* line 256, src/scss/_shared/_common.scss */
 .sign__form-field {
   width: 100%;
 }
 
-/* line 260, src/scss/_shared/_common.scss */
+/* line 259, src/scss/_shared/_common.scss */
 .sign__form-field label.error {
   display: none !important;
 }
 
-/* line 264, src/scss/_shared/_common.scss */
+/* line 263, src/scss/_shared/_common.scss */
 .sign__form-field--input {
   position: relative;
   display: -webkit-box;
@@ -737,12 +737,12 @@ picture {
   background-color: #fff;
 }
 
-/* line 272, src/scss/_shared/_common.scss */
+/* line 271, src/scss/_shared/_common.scss */
 .sign__form-field--input:not(:last-of-type) {
   border-bottom: 1px solid #f4f9fc;
 }
 
-/* line 277, src/scss/_shared/_common.scss */
+/* line 276, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-focus:before, .sign__form-field--input.is-focus:after {
   width: 50%;
   -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
@@ -750,12 +750,12 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 284, src/scss/_shared/_common.scss */
+/* line 283, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-error:before, .sign__form-field--input.is-error:after {
   background-color: #cc0000;
 }
 
-/* line 289, src/scss/_shared/_common.scss */
+/* line 288, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-error .icon-font {
   color: #cc0000;
   -webkit-transition: color 0.3s ease-in-out;
@@ -763,17 +763,17 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 294, src/scss/_shared/_common.scss */
+/* line 293, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-done {
   background-color: #f4f9fc;
 }
 
-/* line 297, src/scss/_shared/_common.scss */
+/* line 296, src/scss/_shared/_common.scss */
 .sign__form-field--input.is-done:before, .sign__form-field--input.is-done:after {
   background-color: #f4f9fc;
 }
 
-/* line 303, src/scss/_shared/_common.scss */
+/* line 302, src/scss/_shared/_common.scss */
 .sign__form-field--input:before, .sign__form-field--input:after {
   content: '';
   position: absolute;
@@ -786,17 +786,17 @@ picture {
   transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 314, src/scss/_shared/_common.scss */
+/* line 313, src/scss/_shared/_common.scss */
 .sign__form-field--input:before {
   left: 50%;
 }
 
-/* line 317, src/scss/_shared/_common.scss */
+/* line 316, src/scss/_shared/_common.scss */
 .sign__form-field--input:after {
   right: 50%;
 }
 
-/* line 322, src/scss/_shared/_common.scss */
+/* line 321, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(1), .sign__form-field--input > div:nth-of-type(3) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -812,12 +812,12 @@ picture {
           justify-content: center;
 }
 
-/* line 329, src/scss/_shared/_common.scss */
+/* line 328, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(1) {
   width: 65px;
 }
 
-/* line 333, src/scss/_shared/_common.scss */
+/* line 332, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -836,12 +836,12 @@ picture {
   max-width: 100%;
 }
 
-/* line 341, src/scss/_shared/_common.scss */
+/* line 340, src/scss/_shared/_common.scss */
 .sign__form-field--input > div:nth-of-type(3) {
   width: 56px;
 }
 
-/* line 345, src/scss/_shared/_common.scss */
+/* line 344, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font {
   color: #818992;
   -webkit-transition: color 0.3s ease-in-out;
@@ -849,29 +849,29 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 349, src/scss/_shared/_common.scss */
+/* line 348, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font.icon-envelope {
   font-size: 18px;
 }
 
-/* line 352, src/scss/_shared/_common.scss */
+/* line 351, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font.icon-user {
   font-size: 24px;
 }
 
-/* line 355, src/scss/_shared/_common.scss */
+/* line 354, src/scss/_shared/_common.scss */
 .sign__form-field--input > div > .icon-font.icon-key {
   font-size: 12px;
 }
 
-/* line 361, src/scss/_shared/_common.scss */
+/* line 360, src/scss/_shared/_common.scss */
 .sign__form-field--input label,
 .sign__form-field--input input {
   height: 50%;
   width: 100%;
 }
 
-/* line 367, src/scss/_shared/_common.scss */
+/* line 366, src/scss/_shared/_common.scss */
 .sign__form-field--input label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -884,7 +884,7 @@ picture {
   padding-bottom: 3px;
 }
 
-/* line 372, src/scss/_shared/_common.scss */
+/* line 371, src/scss/_shared/_common.scss */
 .sign__form-field--input label span {
   font-weight: normal;
   font-size: 14px;
@@ -892,7 +892,7 @@ picture {
   color: #818992;
 }
 
-/* line 380, src/scss/_shared/_common.scss */
+/* line 379, src/scss/_shared/_common.scss */
 .sign__form-field--input input {
   outline: none;
   position: relative;
@@ -945,7 +945,7 @@ picture {
   color: rgba(70, 70, 70, 0.3);
 }
 
-/* line 399, src/scss/_shared/_common.scss */
+/* line 398, src/scss/_shared/_common.scss */
 .sign__form-field--additional {
   display: -webkit-box;
   display: -webkit-flex;
@@ -963,7 +963,7 @@ picture {
   padding-bottom: 53px;
 }
 
-/* line 406, src/scss/_shared/_common.scss */
+/* line 405, src/scss/_shared/_common.scss */
 .sign__form-field--additional a {
   font-size: 14px;
   line-height: 31px;
@@ -973,7 +973,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 412, src/scss/_shared/_common.scss */
+/* line 411, src/scss/_shared/_common.scss */
 .sign__form-field--additional a:hover {
   color: #04c7ff;
   -webkit-transition: color 0.3s ease-in-out;
@@ -981,7 +981,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 419, src/scss/_shared/_common.scss */
+/* line 418, src/scss/_shared/_common.scss */
 .sign__form-field--btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -998,7 +998,7 @@ picture {
   padding-bottom: 53px;
 }
 
-/* line 427, src/scss/_shared/_common.scss */
+/* line 426, src/scss/_shared/_common.scss */
 .sign__form .c-btn {
   width: 100%;
   max-width: -webkit-calc((100% - 51px) / 2);
