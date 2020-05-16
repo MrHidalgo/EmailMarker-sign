@@ -1,15 +1,15 @@
 @font-face {
-	font-family: "iconFont";
-	src: url('../fonts/iconFont.eot');
-	src: url('../fonts/iconFont.eot?#iefix') format('eot'),
-		url('../fonts/iconFont.woff2') format('woff2'),
-		url('../fonts/iconFont.woff') format('woff'),
-		url('../fonts/iconFont.ttf') format('truetype'),
-		url('../fonts/iconFont.svg#iconFont') format('svg');
+	font-family: "iconSignFont";
+	src: url('../fonts/iconSignFont.eot');
+	src: url('../fonts/iconSignFont.eot?#iefix') format('eot'),
+		url('../fonts/iconSignFont.woff2') format('woff2'),
+		url('../fonts/iconSignFont.woff') format('woff'),
+		url('../fonts/iconSignFont.ttf') format('truetype'),
+		url('../fonts/iconSignFont.svg#iconSignFont') format('svg');
 }
 
 @mixin icon-styles {
-	font-family: "iconFont", sans-serif;
+	font-family: "iconSignFont", sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	font-style: normal;

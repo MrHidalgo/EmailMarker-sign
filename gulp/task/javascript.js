@@ -38,7 +38,7 @@ gulp.task('js', function() {
         "_window/**",
         "_document/**",
       ]))
-      .pipe(concat('app.js'))
+      .pipe(concat('sign.js'))
       .pipe(babel(configOption.es6))
       .pipe(changedInPlace(configOption.changed))
       .pipe(gulp.dest(configPath.dest.js))

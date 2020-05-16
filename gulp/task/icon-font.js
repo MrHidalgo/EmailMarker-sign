@@ -8,7 +8,7 @@ const gulp      = require('gulp'),
  *
  * @type {string}
  */
-const fontName = 'iconFont';
+const fontName = 'iconSignFont';
 
 
 /**

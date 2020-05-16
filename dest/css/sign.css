@@ -1,13 +1,13 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "iconFont";
-  src: url("../fonts/iconFont.eot");
-  src: url("../fonts/iconFont.eot?#iefix") format("eot"), url("../fonts/iconFont.woff2") format("woff2"), url("../fonts/iconFont.woff") format("woff"), url("../fonts/iconFont.ttf") format("truetype"), url("../fonts/iconFont.svg#iconFont") format("svg");
+  font-family: "iconSignFont";
+  src: url("../fonts/iconSignFont.eot");
+  src: url("../fonts/iconSignFont.eot?#iefix") format("eot"), url("../fonts/iconSignFont.woff2") format("woff2"), url("../fonts/iconSignFont.woff") format("woff"), url("../fonts/iconSignFont.ttf") format("truetype"), url("../fonts/iconSignFont.svg#iconSignFont") format("svg");
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
 .icon-checked:before, .icon-envelope:before, .icon-hide:before, .icon-key:before, .icon-user:before {
-  font-family: "iconFont", sans-serif;
+  font-family: "iconSignFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-style: normal;
@@ -1405,4 +1405,4 @@ picture {
   color: #818992;
 }
 
-/*# sourceMappingURL=maps/app.css.map */
+/*# sourceMappingURL=maps/sign.css.map */
